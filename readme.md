@@ -19,7 +19,8 @@ To use simply add add script tags and paste in the contents of `/dist/url-query-
 ```
 <script>
 [paste in content from /dist/url-query-forward.min.js]
-</script>```
+</script>
+```
 
 If you are unfamiliar with github go [HERE](https://raw.githubusercontent.com/Sub-Tech/url-query-forward/master/dist/url-query-forward.min.js) to get the code to paste between the `script` tags.
 
