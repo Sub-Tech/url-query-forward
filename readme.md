@@ -16,7 +16,13 @@ You can also include hardcoded query params as well
 The script can be included anywhere on the page - in the head or anywhere in the body is fine.
 
 To use simply add add script tags and paste in the contents of `/dist/url-query-forward.min.js`
-`<script>[paste in content from /dist/url-query-forward.min.js]<script>`
+```
+<script>
+[paste in content from /dist/url-query-forward.min.js]
+</script>```
+
+If you are unfamiliar with github go [HERE](https://raw.githubusercontent.com/Sub-Tech/url-query-forward/master/dist/url-query-forward.min.js) to get the code to paste between the `script` tags.
+
 
 ## Dev
 We use babel to transpile the es6 code and minify.  Run `yarn start` for dev and `yarn build` for production.  Identical build process only one has a watcher.
