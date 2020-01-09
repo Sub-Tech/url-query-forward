@@ -14,22 +14,23 @@
 </div>
 
 <div>
-  <a class="example" href="https://google.com#QFORWARD" target="_blank">Click here</a>
+  <a class="example" href="https://google.com/webhp#QFORWARD" target="_blank">Click here</a>
   <span></span>
 </div>
 
 <div>
-  <a class="example" href="https://google.com?foo=bar#QFORWARD" target="_blank">Click here</a>
+  <a class="example" href="https://google.com/webhp?foo=bar#QFORWARD" target="_blank">Click here</a>
   <span></span>
 </div>
 
 <div>
-  <a class="example" href="https://google.com#QFORWARD?foo=baz" target="_blank">Click here</a>
+  <a class="example" href="https://google.com/webhp#QFORWARD?foo=baz" target="_blank">Click here</a>
   <span></span>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+  // only required for examples so you can see the effect
   function run () {
     $('.example').each(function () {
       var href = $(this).prop('href')
@@ -40,9 +41,8 @@
   run()
 
   setTimeout(function () {
-    run()
+    run() // so you can see the update in the span
   }, 3000)
-
 </script>
 </body>
 </html>
