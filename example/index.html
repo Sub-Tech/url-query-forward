@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>url-query-forward example</title>
+  <!-- loading in the head as some CMS / lander builders only allow here - works anywhere on page - waits for domload anyhows :) -->
+  <script src="../dist/url-query-forward.min.js"></script>
+</head>
+<body>
+<div>
+  <a class="example" href="https://google.com" target="_blank">Click here (no replace)</a>
+  <span></span>
+</div>
+
+<div>
+  <a class="example" href="https://google.com#QFORWARD" target="_blank">Click here</a>
+  <span></span>
+</div>
+
+<div>
+  <a class="example" href="https://google.com?foo=bar#QFORWARD" target="_blank">Click here</a>
+  <span></span>
+</div>
+
+<div>
+  <a class="example" href="https://google.com#QFORWARD?foo=baz" target="_blank">Click here</a>
+  <span></span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  function run () {
+    $('.example').each(function () {
+      var href = $(this).prop('href')
+      $(this).parent('div').find('span').text(href)
+    })
+  }
+
+  run()
+
+  setTimeout(function () {
+    run()
+  }, 3000)
+
+</script>
+</body>
+</html>
