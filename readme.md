@@ -1,5 +1,5 @@
 # url-query-forward
-This is a simple mini lib / minified gist for injecting the pages query string into links on the page.  This is intended for CMS' and lander builder sites like Instapage where tracking query params can be forwarded on.
+This is a simple mini lib / minified gist for injecting the pages query string into links on the page.  This is intended for CMSs and lander builder sites like Instapage where tracking query params can be forwarded on.
 
 ## usage
 any link that requires query forwarding should be edited to include this keyword after the URL
