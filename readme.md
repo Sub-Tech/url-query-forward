@@ -38,11 +38,11 @@ this must be declared before the main code block eg
 </script>
 ```
 
-or 
+or (if you do the below DO NOT omit the ; at the end of the 1st line)
 
 ```
 <script>
-var _urlqueryforward_only_forward = ['test', 'clickid'];
+var _urlqueryforward_only_forward = ['test', 'clickid'];  
 [paste in content from /dist/url-query-forward.min.js]
 </script>
 ```
