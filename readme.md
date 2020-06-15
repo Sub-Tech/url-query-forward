@@ -27,28 +27,41 @@ If you are unfamiliar with github go [HERE](https://raw.githubusercontent.com/Su
 ## Advance usage
 You can specify which query params you would like to use by adding a global var `_urlqueryforward_only_forward`
 example
-`<script>var _urlqueryforward_only_forward = ['test', 'clickid']</script>`
+`<script>
+var _urlqueryforward_only_forward = [
+{
+find_param: 'OutbrainClickId',
+map_to: 's1'
+},
+{
+find_param: 'ad_title',
+map_to: 's2'
+}
+]
+</script>`
 
 this must be declared before the main code block eg
 
 ```
-<script>var _urlqueryforward_only_forward = ['test', 'clickid']</script>
+<script>
+var _urlqueryforward_only_forward = [
+{
+ find_param: 'OutbrainClickId',
+ map_to: 's1'
+},
+{
+ find_param: 'ad_title',
+ map_to: 's2'
+}
+]
+</script>
 <script>
 [paste in content from /dist/url-query-forward.min.js]
 </script>
 ```
 
-or (if you do the below DO NOT omit the ; at the end of the 1st line)
 
-```
-<script>
-var _urlqueryforward_only_forward = ['test', 'clickid'];  
-[paste in content from /dist/url-query-forward.min.js]
-</script>
-```
-
-
-Inside the array `['you', 'can', 'list', 'all', 'the', 'params', 'you', 'are', 'interested', 'in']`
+Inside the array you have objects mapping the `find_param` which exists in the url to `map_to` which will be the used key in the page links
 Doing so will mean that only those params will be copied from the url query string into the links.
 
 If this param is empty or not declared, all params from the query string will be used

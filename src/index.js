@@ -27,14 +27,15 @@
     // we only want to get specific params out of the query string
     let newQ = '?'
     const querySplitArr = q.slice(1).split("&")
-    _urlqueryforward_only_forward.forEach(p =>  {
+    _urlqueryforward_only_forward.forEach(mapping =>  {
+      if (! mapping.find_param || ! mapping.map_to) return; // no need to keep going
       querySplitArr.forEach(qp => {
         const keyValArr = qp.split("=")
-        if (p === keyValArr[0] && keyValArr.length > 1) {
+        if (mapping.find_param === keyValArr[0] && keyValArr.length > 1) {
           if (keyValArr.length > 1) {
-            newQ += `${keyValArr[0]}=${keyValArr[1]}&`
+            newQ += `${mapping.map_to}=${keyValArr[1]}&`
           } else {
-            newQ += `${keyValArr[0]}&`
+            newQ += `${mapping.map_to}&`
           }
         }
       })

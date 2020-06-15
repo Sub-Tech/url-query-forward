@@ -5,7 +5,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>url-query-forward example</title>
   <!-- loading in the head as some CMS / lander builders only allow here - works anywhere on page - waits for domload anyhows :) -->
-  <script>var _urlqueryforward_only_forward = ['test', 'clickid']</script>
+  <script>
+    var _urlqueryforward_only_forward = [
+      {
+        find_param: 'OutbrainClickId',
+        map_to: 's1'
+      },
+      {
+        find_param: 'ad_title',
+        map_to: 's2'
+      },
+      {
+        find_param: 'publisher_id',
+        map_to: 's3'
+      },
+      {
+        find_param: 'publisher_name',
+        map_to: 's4'
+      },
+      {
+        find_param: 'section_id',
+        map_to: 's5'
+      }
+    ]
+  </script>
+
   <script src="../dist/url-query-forward.min.js"></script>
 </head>
 <body>
@@ -15,12 +39,15 @@
 </div>
 
 <div>
-  <a class="example" href="https://google.com/webhp#QFORWARD" target="_blank">Click here</a>
+  <a class="example" href="https://clickwork7secure.com/?a=18689&c=70490#QFORWARD">Click here</a>
   <span></span>
 </div>
 
+
+
+
 <div>
-  <a class="example" href="https://google.com/webhp?foo=bar#QFORWARD" target="_blank">Click here</a>
+  <a class="example" href="https://google.com/webhp?s3=mypage&foo=bar#QFORWARD" target="_blank">Click here</a>
   <span></span>
 </div>
 
