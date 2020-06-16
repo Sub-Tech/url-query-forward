@@ -53,6 +53,7 @@
       for (let i = 0;i < aElements.length; i++) {
         const a = aElements[i]
         const href = a.getAttribute('href')
+        if (! href) continue  // in case of no attribute
         // do we need to replace anything
         if (href.indexOf(REPLACE) === -1) continue
         // check if no query replace with - includes ? char
