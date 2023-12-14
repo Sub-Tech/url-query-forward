@@ -18,11 +18,12 @@
     if (!q || q.length <= 1) {
       return q
     }
-    if (! _urlqueryforward_only_forward
-      || ! _urlqueryforward_only_forward.length
-      || ! _urlqueryforward_only_forward instanceof Array)
+    if (typeof _urlqueryforward_only_forward === 'undefined'
+      || !_urlqueryforward_only_forward
+      || !_urlqueryforward_only_forward.length
+      || !Array.isArray(_urlqueryforward_only_forward))
     {
-      return q
+      return q;
     }
     // we only want to get specific params out of the query string
     let newQ = '?'
